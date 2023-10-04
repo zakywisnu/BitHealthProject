@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4686C762ACD661300C0932F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C752ACD661300C0932F /* AppDelegate.swift */; };
+		B4686C782ACD661300C0932F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C772ACD661300C0932F /* SceneDelegate.swift */; };
+		B4686C7A2ACD661300C0932F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C792ACD661300C0932F /* ViewController.swift */; };
+		B4686C7D2ACD661300C0932F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4686C7B2ACD661300C0932F /* Main.storyboard */; };
+		B4686C7F2ACD661400C0932F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4686C7E2ACD661400C0932F /* Assets.xcassets */; };
+		B4686C822ACD661400C0932F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4686C802ACD661400C0932F /* LaunchScreen.storyboard */; };
+		B4686C8D2ACD661400C0932F /* BitHealthProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C8C2ACD661400C0932F /* BitHealthProjectTests.swift */; };
+		B4686C972ACD661400C0932F /* BitHealthProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C962ACD661400C0932F /* BitHealthProjectUITests.swift */; };
+		B4686C992ACD661400C0932F /* BitHealthProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C982ACD661400C0932F /* BitHealthProjectUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4686C892ACD661400C0932F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4686C6A2ACD661300C0932F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4686C712ACD661300C0932F;
+			remoteInfo = BitHealthProject;
+		};
+		B4686C932ACD661400C0932F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4686C6A2ACD661300C0932F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4686C712ACD661300C0932F;
+			remoteInfo = BitHealthProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B4686C722ACD661300C0932F /* BitHealthProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitHealthProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4686C752ACD661300C0932F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4686C772ACD661300C0932F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B4686C792ACD661300C0932F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4686C7C2ACD661300C0932F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4686C7E2ACD661400C0932F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4686C812ACD661400C0932F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4686C832ACD661400C0932F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4686C882ACD661400C0932F /* BitHealthProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitHealthProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4686C8C2ACD661400C0932F /* BitHealthProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitHealthProjectTests.swift; sourceTree = "<group>"; };
+		B4686C922ACD661400C0932F /* BitHealthProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitHealthProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4686C962ACD661400C0932F /* BitHealthProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitHealthProjectUITests.swift; sourceTree = "<group>"; };
+		B4686C982ACD661400C0932F /* BitHealthProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitHealthProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4686C6F2ACD661300C0932F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4686C852ACD661400C0932F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4686C8F2ACD661400C0932F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4686C692ACD661300C0932F = {
+			isa = PBXGroup;
+			children = (
+				B4686C742ACD661300C0932F /* BitHealthProject */,
+				B4686C8B2ACD661400C0932F /* BitHealthProjectTests */,
+				B4686C952ACD661400C0932F /* BitHealthProjectUITests */,
+				B4686C732ACD661300C0932F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B4686C732ACD661300C0932F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4686C722ACD661300C0932F /* BitHealthProject.app */,
+				B4686C882ACD661400C0932F /* BitHealthProjectTests.xctest */,
+				B4686C922ACD661400C0932F /* BitHealthProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4686C742ACD661300C0932F /* BitHealthProject */ = {
+			isa = PBXGroup;
+			children = (
+				B4686C752ACD661300C0932F /* AppDelegate.swift */,
+				B4686C772ACD661300C0932F /* SceneDelegate.swift */,
+				B4686C792ACD661300C0932F /* ViewController.swift */,
+				B4686C7B2ACD661300C0932F /* Main.storyboard */,
+				B4686C7E2ACD661400C0932F /* Assets.xcassets */,
+				B4686C802ACD661400C0932F /* LaunchScreen.storyboard */,
+				B4686C832ACD661400C0932F /* Info.plist */,
+			);
+			path = BitHealthProject;
+			sourceTree = "<group>";
+		};
+		B4686C8B2ACD661400C0932F /* BitHealthProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4686C8C2ACD661400C0932F /* BitHealthProjectTests.swift */,
+			);
+			path = BitHealthProjectTests;
+			sourceTree = "<group>";
+		};
+		B4686C952ACD661400C0932F /* BitHealthProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B4686C962ACD661400C0932F /* BitHealthProjectUITests.swift */,
+				B4686C982ACD661400C0932F /* BitHealthProjectUITestsLaunchTests.swift */,
+			);
+			path = BitHealthProjectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4686C712ACD661300C0932F /* BitHealthProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4686C9C2ACD661400C0932F /* Build configuration list for PBXNativeTarget "BitHealthProject" */;
+			buildPhases = (
+				B4686C6E2ACD661300C0932F /* Sources */,
+				B4686C6F2ACD661300C0932F /* Frameworks */,
+				B4686C702ACD661300C0932F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitHealthProject;
+			productName = BitHealthProject;
+			productReference = B4686C722ACD661300C0932F /* BitHealthProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4686C872ACD661400C0932F /* BitHealthProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4686C9F2ACD661400C0932F /* Build configuration list for PBXNativeTarget "BitHealthProjectTests" */;
+			buildPhases = (
+				B4686C842ACD661400C0932F /* Sources */,
+				B4686C852ACD661400C0932F /* Frameworks */,
+				B4686C862ACD661400C0932F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4686C8A2ACD661400C0932F /* PBXTargetDependency */,
+			);
+			name = BitHealthProjectTests;
+			productName = BitHealthProjectTests;
+			productReference = B4686C882ACD661400C0932F /* BitHealthProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B4686C912ACD661400C0932F /* BitHealthProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4686CA22ACD661400C0932F /* Build configuration list for PBXNativeTarget "BitHealthProjectUITests" */;
+			buildPhases = (
+				B4686C8E2ACD661400C0932F /* Sources */,
+				B4686C8F2ACD661400C0932F /* Frameworks */,
+				B4686C902ACD661400C0932F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4686C942ACD661400C0932F /* PBXTargetDependency */,
+			);
+			name = BitHealthProjectUITests;
+			productName = BitHealthProjectUITests;
+			productReference = B4686C922ACD661400C0932F /* BitHealthProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4686C6A2ACD661300C0932F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					B4686C712ACD661300C0932F = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					B4686C872ACD661400C0932F = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B4686C712ACD661300C0932F;
+					};
+					B4686C912ACD661400C0932F = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B4686C712ACD661300C0932F;
+					};
+				};
+			};
+			buildConfigurationList = B4686C6D2ACD661300C0932F /* Build configuration list for PBXProject "BitHealthProject" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4686C692ACD661300C0932F;
+			productRefGroup = B4686C732ACD661300C0932F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4686C712ACD661300C0932F /* BitHealthProject */,
+				B4686C872ACD661400C0932F /* BitHealthProjectTests */,
+				B4686C912ACD661400C0932F /* BitHealthProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4686C702ACD661300C0932F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4686C822ACD661400C0932F /* LaunchScreen.storyboard in Resources */,
+				B4686C7F2ACD661400C0932F /* Assets.xcassets in Resources */,
+				B4686C7D2ACD661300C0932F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4686C862ACD661400C0932F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4686C902ACD661400C0932F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4686C6E2ACD661300C0932F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4686C7A2ACD661300C0932F /* ViewController.swift in Sources */,
+				B4686C762ACD661300C0932F /* AppDelegate.swift in Sources */,
+				B4686C782ACD661300C0932F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4686C842ACD661400C0932F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4686C8D2ACD661400C0932F /* BitHealthProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4686C8E2ACD661400C0932F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4686C992ACD661400C0932F /* BitHealthProjectUITestsLaunchTests.swift in Sources */,
+				B4686C972ACD661400C0932F /* BitHealthProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4686C8A2ACD661400C0932F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4686C712ACD661300C0932F /* BitHealthProject */;
+			targetProxy = B4686C892ACD661400C0932F /* PBXContainerItemProxy */;
+		};
+		B4686C942ACD661400C0932F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4686C712ACD661300C0932F /* BitHealthProject */;
+			targetProxy = B4686C932ACD661400C0932F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4686C7B2ACD661300C0932F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4686C7C2ACD661300C0932F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B4686C802ACD661400C0932F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4686C812ACD661400C0932F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4686C9A2ACD661400C0932F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B4686C9B2ACD661400C0932F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4686C9D2ACD661400C0932F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H443SZWX2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BitHealthProject/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroemotion.BitHealthProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4686C9E2ACD661400C0932F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H443SZWX2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BitHealthProject/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroemotion.BitHealthProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B4686CA02ACD661400C0932F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H443SZWX2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroemotion.BitHealthProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitHealthProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BitHealthProject";
+			};
+			name = Debug;
+		};
+		B4686CA12ACD661400C0932F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H443SZWX2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroemotion.BitHealthProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitHealthProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BitHealthProject";
+			};
+			name = Release;
+		};
+		B4686CA32ACD661400C0932F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H443SZWX2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroemotion.BitHealthProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BitHealthProject;
+			};
+			name = Debug;
+		};
+		B4686CA42ACD661400C0932F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H443SZWX2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroemotion.BitHealthProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BitHealthProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4686C6D2ACD661300C0932F /* Build configuration list for PBXProject "BitHealthProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4686C9A2ACD661400C0932F /* Debug */,
+				B4686C9B2ACD661400C0932F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4686C9C2ACD661400C0932F /* Build configuration list for PBXNativeTarget "BitHealthProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4686C9D2ACD661400C0932F /* Debug */,
+				B4686C9E2ACD661400C0932F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4686C9F2ACD661400C0932F /* Build configuration list for PBXNativeTarget "BitHealthProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4686CA02ACD661400C0932F /* Debug */,
+				B4686CA12ACD661400C0932F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4686CA22ACD661400C0932F /* Build configuration list for PBXNativeTarget "BitHealthProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4686CA32ACD661400C0932F /* Debug */,
+				B4686CA42ACD661400C0932F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4686C6A2ACD661300C0932F /* Project object */;
+}
