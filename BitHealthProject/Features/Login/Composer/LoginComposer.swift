@@ -10,9 +10,9 @@ import Foundation
 final class LoginComposer {
     private init() {}
     
-    static func composeLogin() -> LoginViewController {
-        let vc = LoginViewController()
-        
+    static func composeLogin(showRegis: @escaping () -> Void) -> LoginViewController {
+        let viewModel = LoginViewModelDefault(routeToRegis: showRegis)
+        let vc = LoginViewController(viewModel: viewModel)
         return vc
     }
 }

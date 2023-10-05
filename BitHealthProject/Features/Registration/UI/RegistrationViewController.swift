@@ -52,7 +52,7 @@ final class RegistrationViewController: UIViewController {
     private lazy var signUpButton: UIButton = {
         let view = UIButton()
         view.addTarget(self, action: #selector(didTapSignUp), for: .touchUpInside)
-        view.setTitle("Login", for: .normal)
+        view.setTitle("Sign up now", for: .normal)
         view.backgroundColor = .systemBlue
         view.setCornerRadius(8)
         return view

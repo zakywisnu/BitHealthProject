@@ -9,6 +9,8 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
+    private let viewModel: LoginViewModel
+    
     private let stackView: UIStackView = {
         let view = UIStackView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -70,6 +72,15 @@ final class LoginViewController: UIViewController {
         return view
     }()
     
+    init(viewModel: LoginViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("coder hasn't been implemented yet")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -102,7 +113,7 @@ extension LoginViewController {
     
     @objc
     private func didTapSignUp() {
-        print("go to sign up")
+        viewModel.routeToRegis?()
     }
     
     @objc
