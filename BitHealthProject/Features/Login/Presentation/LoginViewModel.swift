@@ -9,6 +9,7 @@ import Foundation
 
 protocol LoginViewModel {
     var routeToRegis: (() -> Void)? { get }
+    var passwordErrorText: String? { get }
     
     init(routeToRegis: @escaping () -> Void)
 }
@@ -20,5 +21,7 @@ final class LoginViewModelDefault: LoginViewModel {
     init(routeToRegis: @escaping () -> Void) {
         self.routeToRegis = routeToRegis
     }
+    
+    private(set) var passwordErrorText: String?
     
 }

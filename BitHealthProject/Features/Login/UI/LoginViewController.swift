@@ -28,28 +28,23 @@ final class LoginViewController: UIViewController {
         return view
     }()
     
-    private let usernameField: UITextField = {
-        let view = UITextField()
-        view.setCornerRadius(8)
-        view.addBorder()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setLeftPaddingPoints(8)
-        view.setRightPaddingPoints(8)
-        view.placeholder = "Input your username"
-        return view
-    }()
+    private lazy var usernameField: CustomTextField = CustomTextField()
+        .isSecure(false)
+        .setBottomLabelColor(.red)
+        .setFieldBorder()
+        .setFieldCornerRadius(8)
+        .setHiddenLabel(true)
+        .setPlaceHolder("Input your username")
+        .updateBottomLabelText(viewModel.passwordErrorText)
     
-    private let passwordField: UITextField = {
-        let view = UITextField()
-        view.setCornerRadius(8)
-        view.addBorder()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setLeftPaddingPoints(8)
-        view.setRightPaddingPoints(8)
-        view.isSecureTextEntry = true
-        view.placeholder = "Input your password"
-        return view
-    }()
+    private lazy var passwordField: CustomTextField = CustomTextField()
+        .isSecure(true)
+        .setBottomLabelColor(.red)
+        .setFieldBorder()
+        .setFieldCornerRadius(8)
+        .setHiddenLabel(true)
+        .setPlaceHolder("Input your password")
+        .updateBottomLabelText(viewModel.passwordErrorText)
     
     private lazy var loginButton: UIButton = {
         let view = UIButton()
@@ -104,8 +99,6 @@ extension LoginViewController {
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             
-            usernameField.heightAnchor.constraint(equalToConstant: 44),
-            passwordField.heightAnchor.constraint(equalToConstant: 44),
             loginButton.heightAnchor.constraint(equalToConstant: 44),
         ])
     }
@@ -117,6 +110,6 @@ extension LoginViewController {
     
     @objc
     private func didTapLogin() {
-        print("go to login")
+        print("password: \(passwordField.getText())")
     }
 }
