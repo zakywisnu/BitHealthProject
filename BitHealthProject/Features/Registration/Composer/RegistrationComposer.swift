@@ -10,8 +10,9 @@ import Foundation
 final class RegistrationComposer {
     private init() {}
     
-    static func composeRegistration() -> RegistrationViewController {
-        let vc = RegistrationViewController()
+    static func composeRegistration(successRegis: @escaping () -> Void) -> RegistrationViewController {
+        let viewModel = RegistrationViewModelDefault(onSuccessRegis: successRegis)
+        let vc = RegistrationViewController(viewModel: viewModel)
         
         return vc
     }

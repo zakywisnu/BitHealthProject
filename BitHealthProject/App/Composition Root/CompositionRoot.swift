@@ -30,7 +30,11 @@ final class CompositionRoot {
     }
     
     func showRegistration() {
-        let vc = RegistrationComposer.composeRegistration()
+        let vc = RegistrationComposer.composeRegistration(successRegis: navigateBack)
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    private func navigateBack() {
+        navigationController.popViewController(animated: true)
     }
 }

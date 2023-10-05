@@ -32,6 +32,7 @@
 		B4686CE52ACE7C6E00C0932F /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CE42ACE7C6E00C0932F /* URLProtocolStub.swift */; };
 		B4686CE82ACE7C9400C0932F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CE72ACE7C9400C0932F /* HTTPMethod.swift */; };
 		B4686CEA2ACE7CA000C0932F /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CE92ACE7CA000C0932F /* APIEndpoint.swift */; };
+		B4686CED2ACE9BC500C0932F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CEC2ACE9BC500C0932F /* RegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		B4686CE72ACE7C9400C0932F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		B4686CE92ACE7CA000C0932F /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		B4686CEB2ACE7DDC00C0932F /* BitHealthProjectUnitTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = BitHealthProjectUnitTestPlan.xctestplan; path = BitHealthProjectTests/BitHealthProjectUnitTestPlan.xctestplan; sourceTree = "<group>"; };
+		B4686CEC2ACE9BC500C0932F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 		B4686CAF2ACD675200C0932F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B4686CEC2ACE9BC500C0932F /* RegistrationViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				B4686CC22ACDB62200C0932F /* RegistrationComposer.swift in Sources */,
 				B4686CEA2ACE7CA000C0932F /* APIEndpoint.swift in Sources */,
 				B4686CB62ACD69A300C0932F /* UIVIew+Extension.swift in Sources */,
+				B4686CED2ACE9BC500C0932F /* RegistrationViewModel.swift in Sources */,
 				B4686CB82ACD6A5900C0932F /* UITextField+Extension.swift in Sources */,
 				B4686CDF2ACE7A6800C0932F /* AlamofireHTTPClient.swift in Sources */,
 				B4686CC42ACDB69100C0932F /* CompositionRoot.swift in Sources */,

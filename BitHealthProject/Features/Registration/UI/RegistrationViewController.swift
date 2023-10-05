@@ -9,6 +9,8 @@ import UIKit
 
 final class RegistrationViewController: UIViewController {
     
+    private let viewModel: RegistrationViewModel
+    
     private let stackView: UIStackView = {
         let view = UIStackView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -58,6 +60,15 @@ final class RegistrationViewController: UIViewController {
         return view
     }()
     
+    init(viewModel: RegistrationViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("coder hasn't been implemented yet")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -89,7 +100,9 @@ extension RegistrationViewController {
     
     @objc
     private func didTapSignUp() {
-        print("go to login page")
+        let username = usernameField.text ?? ""
+        let password = passwordField.text ?? ""
+        viewModel.onTapRegis(username: username, password: password)
     }
 }
 
