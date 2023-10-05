@@ -41,6 +41,8 @@
 		B4686D072ACEDF0500C0932F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D062ACEDF0500C0932F /* Constants.swift */; };
 		B4686D092ACEE14800C0932F /* BitHealthProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D082ACEE14800C0932F /* BitHealthProjectUITests.swift */; };
 		B4686D0C2ACEE23400C0932F /* MealsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D0B2ACEE23400C0932F /* MealsEndpoint.swift */; };
+		B4686D102ACEE29900C0932F /* MealsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D0F2ACEE29900C0932F /* MealsMapperTests.swift */; };
+		B4686D122ACEFDE600C0932F /* HTTPURLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D112ACEFDE600C0932F /* HTTPURLResponse+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		B4686D062ACEDF0500C0932F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4686D082ACEE14800C0932F /* BitHealthProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitHealthProjectUITests.swift; sourceTree = "<group>"; };
 		B4686D0B2ACEE23400C0932F /* MealsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpoint.swift; sourceTree = "<group>"; };
+		B4686D0F2ACEE29900C0932F /* MealsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsMapperTests.swift; sourceTree = "<group>"; };
+		B4686D112ACEFDE600C0932F /* HTTPURLResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 		B4686C8B2ACD661400C0932F /* BitHealthProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				B4686CEE2ACE9FCD00C0932F /* Helpers */,
 				B4686D012ACEDCE600C0932F /* Domain */,
 				B4686CD92ACE7A1B00C0932F /* Core */,
 			);
@@ -329,6 +334,7 @@
 				B4686CE62ACE7C8B00C0932F /* Endpoint */,
 				B4686CDD2ACE7A5F00C0932F /* Infrastructure */,
 				B4686CDB2ACE7A4F00C0932F /* HTTPClient.swift */,
+				B4686D112ACEFDE600C0932F /* HTTPURLResponse+Extension.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -336,7 +342,6 @@
 		B4686CD92ACE7A1B00C0932F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B4686CEE2ACE9FCD00C0932F /* Helpers */,
 				B4686CDA2ACE7A2300C0932F /* Remote */,
 			);
 			path = Core;
@@ -447,6 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				B4686D032ACEDD1500C0932F /* MealsEndpointTests.swift */,
+				B4686D0F2ACEE29900C0932F /* MealsMapperTests.swift */,
 			);
 			path = Meals;
 			sourceTree = "<group>";
@@ -614,6 +620,7 @@
 				B4686CF82ACEC52B00C0932F /* MealsViewController.swift in Sources */,
 				B4686CF32ACEA2AF00C0932F /* CustomTextField.swift in Sources */,
 				B4686CB82ACD6A5900C0932F /* UITextField+Extension.swift in Sources */,
+				B4686D122ACEFDE600C0932F /* HTTPURLResponse+Extension.swift in Sources */,
 				B4686CDF2ACE7A6800C0932F /* AlamofireHTTPClient.swift in Sources */,
 				B4686D0C2ACEE23400C0932F /* MealsEndpoint.swift in Sources */,
 				B4686CC42ACDB69100C0932F /* CompositionRoot.swift in Sources */,
@@ -638,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4686CD72ACE79F200C0932F /* AlamofireHTTPClientTests.swift in Sources */,
+				B4686D102ACEE29900C0932F /* MealsMapperTests.swift in Sources */,
 				B4686D042ACEDD1500C0932F /* MealsEndpointTests.swift in Sources */,
 				B4686CE52ACE7C6E00C0932F /* URLProtocolStub.swift in Sources */,
 				B4686CF02ACE9FD700C0932F /* SharedTestHelpers.swift in Sources */,
