@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+final class RegistrationComposer {
+    private init() {}
+    
+    static func composeRegistration() -> RegistrationViewController {
+        let vc = RegistrationViewController()
+        
+        return vc
+    }
+}
