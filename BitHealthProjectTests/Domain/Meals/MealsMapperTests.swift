@@ -179,7 +179,7 @@ enum MealsMapper {
     }
 }
 
-struct Meals {
+struct Meals: Equatable {
     let idMeal: String
     let strMeal: String
     let strCategory: String
@@ -248,6 +248,15 @@ final class MealsMapperTests: XCTestCase {
             XCTAssertThrowsError(
                 try MealsMapper.map(invalidJSON, from: HTTPURLResponse(statusCode: code))
             )
+        }
+    }
+    
+    func test_map_deliversNoItemsOn2xxHTTPResponseWithEmptyJSONList() throws {
+        let emptyListJSON = makeItemsJSON([])
+
+        try validStatusCode.forEach { code in
+            let result = try MealsMapper.map(emptyListJSON, from: HTTPURLResponse(statusCode: code))
+            XCTAssertEqual(result, [])
         }
     }
 
