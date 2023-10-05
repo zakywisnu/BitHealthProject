@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+final class LoginComposer {
+    private init() {}
+    
+    static func composeLogin() -> LoginViewController {
+        let vc = LoginViewController()
+        
+        return vc
+    }
+}
