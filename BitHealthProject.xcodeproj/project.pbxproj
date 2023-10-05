@@ -26,6 +26,7 @@
 		B4686CC42ACDB69100C0932F /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CC32ACDB69100C0932F /* CompositionRoot.swift */; };
 		B4686CC72ACE69B500C0932F /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CC62ACE69B500C0932F /* DefaultsKeys.swift */; };
 		B4686CC92ACE6A0300C0932F /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CC82ACE6A0300C0932F /* UserDefaultsKeys.swift */; };
+		B4686CD52ACE777F00C0932F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CD42ACE777F00C0932F /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		B4686CC32ACDB69100C0932F /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
 		B4686CC62ACE69B500C0932F /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		B4686CC82ACE6A0300C0932F /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		B4686CD42ACE777F00C0932F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,9 +186,9 @@
 		B4686CA92ACD670800C0932F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B4686CCA2ACE6C2D00C0932F /* Composition Root */,
 				B4686C752ACD661300C0932F /* AppDelegate.swift */,
 				B4686C772ACD661300C0932F /* SceneDelegate.swift */,
-				B4686CC32ACDB69100C0932F /* CompositionRoot.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -222,6 +224,7 @@
 		B4686CAD2ACD674800C0932F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B4686CD42ACE777F00C0932F /* LoginViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -275,6 +278,14 @@
 				B4686CC82ACE6A0300C0932F /* UserDefaultsKeys.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		B4686CCA2ACE6C2D00C0932F /* Composition Root */ = {
+			isa = PBXGroup;
+			children = (
+				B4686CC32ACDB69100C0932F /* CompositionRoot.swift */,
+			);
+			path = "Composition Root";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +426,7 @@
 				B4686C762ACD661300C0932F /* AppDelegate.swift in Sources */,
 				B4686CBF2ACDB59F00C0932F /* RegistrationViewController.swift in Sources */,
 				B4686CC72ACE69B500C0932F /* DefaultsKeys.swift in Sources */,
+				B4686CD52ACE777F00C0932F /* LoginViewModel.swift in Sources */,
 				B4686CC92ACE6A0300C0932F /* UserDefaultsKeys.swift in Sources */,
 				B4686C782ACD661300C0932F /* SceneDelegate.swift in Sources */,
 				B4686CB42ACD692800C0932F /* LoginViewController.swift in Sources */,

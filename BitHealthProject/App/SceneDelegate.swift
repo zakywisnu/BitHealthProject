@@ -16,8 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let vc = LoginComposer.composeLogin()
-        window?.rootViewController = UINavigationController(rootViewController: CompositionRoot.composeRoot())
+        window?.rootViewController = CompositionRoot(navigationController: UINavigationController()).composeRoot()
         window?.makeKeyAndVisible()
     }
 
