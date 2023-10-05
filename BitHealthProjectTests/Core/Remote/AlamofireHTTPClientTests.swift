@@ -32,6 +32,14 @@ final class AlamofireHTTPClientTests: XCTestCase {
         
         wait(for: [exp], timeout: 1.0)
     }
+    
+    func test_performRequest_failsOnRequestError() {
+        let requestError = anyNSError()
+        
+        let receivedError = resultErrorFor((data: nil, response: nil, error: requestError))
+        
+        XCTAssertNotNil(receivedError)
+    }
 
     // MARK: - Helpers
     

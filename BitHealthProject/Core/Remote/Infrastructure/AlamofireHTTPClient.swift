@@ -18,7 +18,7 @@ public final class AlamofireHTTPClient: HTTPClient {
     private struct UnexpectedValuesRepresentation: Error {}
     
     public func performRequest(_ request: URLRequest, completion: @escaping (HTTPClient.Result) -> Void) {
-        let afRequest = session.request(request)
+        session.request(request)
             .responseData { response in
                 completion(Result {
                     if let error = response.error {
