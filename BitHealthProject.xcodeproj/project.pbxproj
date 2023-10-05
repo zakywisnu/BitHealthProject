@@ -43,6 +43,8 @@
 		B4686D0C2ACEE23400C0932F /* MealsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D0B2ACEE23400C0932F /* MealsEndpoint.swift */; };
 		B4686D102ACEE29900C0932F /* MealsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D0F2ACEE29900C0932F /* MealsMapperTests.swift */; };
 		B4686D122ACEFDE600C0932F /* HTTPURLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D112ACEFDE600C0932F /* HTTPURLResponse+Extension.swift */; };
+		B4686D152ACF1BBF00C0932F /* MealsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D142ACF1BBF00C0932F /* MealsMapper.swift */; };
+		B4686D172ACF1BEB00C0932F /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D162ACF1BEB00C0932F /* Meals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		B4686D0B2ACEE23400C0932F /* MealsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpoint.swift; sourceTree = "<group>"; };
 		B4686D0F2ACEE29900C0932F /* MealsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsMapperTests.swift; sourceTree = "<group>"; };
 		B4686D112ACEFDE600C0932F /* HTTPURLResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extension.swift"; sourceTree = "<group>"; };
+		B4686D142ACF1BBF00C0932F /* MealsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsMapper.swift; sourceTree = "<group>"; };
+		B4686D162ACF1BEB00C0932F /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +473,8 @@
 			isa = PBXGroup;
 			children = (
 				B4686D0B2ACEE23400C0932F /* MealsEndpoint.swift */,
+				B4686D142ACF1BBF00C0932F /* MealsMapper.swift */,
+				B4686D162ACF1BEB00C0932F /* Meals.swift */,
 			);
 			path = Meals;
 			sourceTree = "<group>";
@@ -624,11 +630,13 @@
 				B4686CDF2ACE7A6800C0932F /* AlamofireHTTPClient.swift in Sources */,
 				B4686D0C2ACEE23400C0932F /* MealsEndpoint.swift in Sources */,
 				B4686CC42ACDB69100C0932F /* CompositionRoot.swift in Sources */,
+				B4686D172ACF1BEB00C0932F /* Meals.swift in Sources */,
 				B4686C762ACD661300C0932F /* AppDelegate.swift in Sources */,
 				B4686CBF2ACDB59F00C0932F /* RegistrationViewController.swift in Sources */,
 				B4686CC72ACE69B500C0932F /* DefaultsKeys.swift in Sources */,
 				B4686CD52ACE777F00C0932F /* LoginViewModel.swift in Sources */,
 				B4686CC92ACE6A0300C0932F /* UserDefaultsKeys.swift in Sources */,
+				B4686D152ACF1BBF00C0932F /* MealsMapper.swift in Sources */,
 				B4686C782ACD661300C0932F /* SceneDelegate.swift in Sources */,
 				B4686CB42ACD692800C0932F /* LoginViewController.swift in Sources */,
 				B4686CE82ACE7C9400C0932F /* HTTPMethod.swift in Sources */,
