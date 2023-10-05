@@ -18,7 +18,7 @@ final class AlamofireHTTPClientTests: XCTestCase {
     }
     
     func test_getFromURL_performGetRequestWithURL() {
-        let url = Self.anyURL()
+        let url = anyURL()
         
         let exp = expectation(description: "Wait for request")
         
@@ -73,14 +73,6 @@ final class AlamofireHTTPClientTests: XCTestCase {
         return session
     }
     
-    private static func anyURL() -> URL {
-        return URL(string: "https://any-url.com")!
-    }
-    
-    private func anyNSError() -> Error {
-        return NSError(domain: "any error", code: 0)
-    }
-    
     private func resultValuesFor(_ values: (data: Data?, response: URLResponse?, error: Error?), request: URLRequest = MockAPIEndpoint().makeURLRequest(), file: StaticString = #filePath, line: UInt = #line) -> (data: Data, response: HTTPURLResponse)? {
         let result = resultFor(values, request: request, file: file, line: line)
 
@@ -123,7 +115,7 @@ final class AlamofireHTTPClientTests: XCTestCase {
     
     private struct MockAPIEndpoint: APIEndpoint {
         var baseURL: URL {
-            return AlamofireHTTPClientTests.anyURL()
+            return anyURL()
         }
         
         var path: String {
@@ -136,14 +128,10 @@ final class AlamofireHTTPClientTests: XCTestCase {
     }
     
     private func anyHTTPURLResponse() -> HTTPURLResponse {
-        return HTTPURLResponse(url: Self.anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)!
+        return HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)!
     }
 
     private func nonHTTPURLResponse() -> URLResponse {
-        return URLResponse(url: Self.anyURL(), mimeType: nil, expectedContentLength: 0, textEncodingName: nil)
-    }
-    
-    private func anyData() -> Data {
-        return Data("any data".utf8)
+        return URLResponse(url: anyURL(), mimeType: nil, expectedContentLength: 0, textEncodingName: nil)
     }
 }

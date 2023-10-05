@@ -33,6 +33,7 @@
 		B4686CE82ACE7C9400C0932F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CE72ACE7C9400C0932F /* HTTPMethod.swift */; };
 		B4686CEA2ACE7CA000C0932F /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CE92ACE7CA000C0932F /* APIEndpoint.swift */; };
 		B4686CED2ACE9BC500C0932F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CEC2ACE9BC500C0932F /* RegistrationViewModel.swift */; };
+		B4686CF02ACE9FD700C0932F /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CEF2ACE9FD700C0932F /* SharedTestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		B4686CE92ACE7CA000C0932F /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		B4686CEB2ACE7DDC00C0932F /* BitHealthProjectUnitTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = BitHealthProjectUnitTestPlan.xctestplan; path = BitHealthProjectTests/BitHealthProjectUnitTestPlan.xctestplan; sourceTree = "<group>"; };
 		B4686CEC2ACE9BC500C0932F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		B4686CEF2ACE9FD700C0932F /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +318,7 @@
 		B4686CD92ACE7A1B00C0932F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B4686CEE2ACE9FCD00C0932F /* Helpers */,
 				B4686CDA2ACE7A2300C0932F /* Remote */,
 			);
 			path = Core;
@@ -353,6 +356,14 @@
 				B4686CE92ACE7CA000C0932F /* APIEndpoint.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		B4686CEE2ACE9FCD00C0932F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4686CEF2ACE9FD700C0932F /* SharedTestHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -519,6 +530,7 @@
 			files = (
 				B4686CD72ACE79F200C0932F /* AlamofireHTTPClientTests.swift in Sources */,
 				B4686CE52ACE7C6E00C0932F /* URLProtocolStub.swift in Sources */,
+				B4686CF02ACE9FD700C0932F /* SharedTestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
