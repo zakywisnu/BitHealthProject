@@ -1,0 +1,39 @@
+{
+  "configurations" : [
+    {
+      "id" : "D7BF362E-E777-4444-99BB-BF2EEC880354",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BitHealthProject.xcodeproj",
+      "identifier" : "B4686C712ACD661300C0932F",
+      "name" : "BitHealthProject"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:BitHealthProject.xcodeproj",
+        "identifier" : "B4686C872ACD661400C0932F",
+        "name" : "BitHealthProjectTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:BitHealthProject.xcodeproj",
+        "identifier" : "B4686C912ACD661400C0932F",
+        "name" : "BitHealthProjectUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

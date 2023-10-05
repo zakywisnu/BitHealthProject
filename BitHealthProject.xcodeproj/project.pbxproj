@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		B4686C762ACD661300C0932F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C752ACD661300C0932F /* AppDelegate.swift */; };
 		B4686C782ACD661300C0932F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C772ACD661300C0932F /* SceneDelegate.swift */; };
-		B4686C7A2ACD661300C0932F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C792ACD661300C0932F /* ViewController.swift */; };
 		B4686C7F2ACD661400C0932F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4686C7E2ACD661400C0932F /* Assets.xcassets */; };
 		B4686C822ACD661400C0932F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4686C802ACD661400C0932F /* LaunchScreen.storyboard */; };
-		B4686C8D2ACD661400C0932F /* BitHealthProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C8C2ACD661400C0932F /* BitHealthProjectTests.swift */; };
 		B4686C972ACD661400C0932F /* BitHealthProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C962ACD661400C0932F /* BitHealthProjectUITests.swift */; };
 		B4686C992ACD661400C0932F /* BitHealthProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686C982ACD661400C0932F /* BitHealthProjectUITestsLaunchTests.swift */; };
 		B4686CB22ACD681600C0932F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CB12ACD681600C0932F /* UIImage+Extension.swift */; };
@@ -27,6 +25,13 @@
 		B4686CC72ACE69B500C0932F /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CC62ACE69B500C0932F /* DefaultsKeys.swift */; };
 		B4686CC92ACE6A0300C0932F /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CC82ACE6A0300C0932F /* UserDefaultsKeys.swift */; };
 		B4686CD52ACE777F00C0932F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CD42ACE777F00C0932F /* LoginViewModel.swift */; };
+		B4686CD72ACE79F200C0932F /* AlamofireHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CD62ACE79F200C0932F /* AlamofireHTTPClientTests.swift */; };
+		B4686CDC2ACE7A4F00C0932F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CDB2ACE7A4F00C0932F /* HTTPClient.swift */; };
+		B4686CDF2ACE7A6800C0932F /* AlamofireHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CDE2ACE7A6800C0932F /* AlamofireHTTPClient.swift */; };
+		B4686CE22ACE7AC800C0932F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B4686CE12ACE7AC800C0932F /* Alamofire */; };
+		B4686CE52ACE7C6E00C0932F /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CE42ACE7C6E00C0932F /* URLProtocolStub.swift */; };
+		B4686CE82ACE7C9400C0932F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CE72ACE7C9400C0932F /* HTTPMethod.swift */; };
+		B4686CEA2ACE7CA000C0932F /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686CE92ACE7CA000C0932F /* APIEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +55,10 @@
 		B4686C722ACD661300C0932F /* BitHealthProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitHealthProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4686C752ACD661300C0932F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4686C772ACD661300C0932F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4686C792ACD661300C0932F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B4686C7E2ACD661400C0932F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4686C812ACD661400C0932F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4686C832ACD661400C0932F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4686C882ACD661400C0932F /* BitHealthProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitHealthProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4686C8C2ACD661400C0932F /* BitHealthProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitHealthProjectTests.swift; sourceTree = "<group>"; };
 		B4686C922ACD661400C0932F /* BitHealthProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitHealthProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4686C962ACD661400C0932F /* BitHealthProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitHealthProjectUITests.swift; sourceTree = "<group>"; };
 		B4686C982ACD661400C0932F /* BitHealthProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitHealthProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -71,6 +74,13 @@
 		B4686CC62ACE69B500C0932F /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		B4686CC82ACE6A0300C0932F /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		B4686CD42ACE777F00C0932F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B4686CD62ACE79F200C0932F /* AlamofireHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHTTPClientTests.swift; sourceTree = "<group>"; };
+		B4686CDB2ACE7A4F00C0932F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		B4686CDE2ACE7A6800C0932F /* AlamofireHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHTTPClient.swift; sourceTree = "<group>"; };
+		B4686CE42ACE7C6E00C0932F /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
+		B4686CE72ACE7C9400C0932F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		B4686CE92ACE7CA000C0932F /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		B4686CEB2ACE7DDC00C0932F /* BitHealthProjectUnitTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = BitHealthProjectUnitTestPlan.xctestplan; path = BitHealthProjectTests/BitHealthProjectUnitTestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4686CE22ACE7AC800C0932F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +112,7 @@
 		B4686C692ACD661300C0932F = {
 			isa = PBXGroup;
 			children = (
+				B4686CEB2ACE7DDC00C0932F /* BitHealthProjectUnitTestPlan.xctestplan */,
 				B4686C742ACD661300C0932F /* BitHealthProject */,
 				B4686C8B2ACD661400C0932F /* BitHealthProjectTests */,
 				B4686C952ACD661400C0932F /* BitHealthProjectUITests */,
@@ -126,7 +138,6 @@
 				B4686CA72ACD66F400C0932F /* Core */,
 				B4686CA62ACD66EF00C0932F /* Domain */,
 				B4686CA52ACD66E500C0932F /* Features */,
-				B4686C792ACD661300C0932F /* ViewController.swift */,
 			);
 			path = BitHealthProject;
 			sourceTree = "<group>";
@@ -134,7 +145,7 @@
 		B4686C8B2ACD661400C0932F /* BitHealthProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				B4686C8C2ACD661400C0932F /* BitHealthProjectTests.swift */,
+				B4686CD92ACE7A1B00C0932F /* Core */,
 			);
 			path = BitHealthProjectTests;
 			sourceTree = "<group>";
@@ -167,6 +178,7 @@
 		B4686CA72ACD66F400C0932F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B4686CD82ACE7A1400C0932F /* Remote */,
 				B4686CC52ACE68B900C0932F /* UserDefaults */,
 				B4686CB02ACD680B00C0932F /* Extension */,
 			);
@@ -288,6 +300,58 @@
 			path = "Composition Root";
 			sourceTree = "<group>";
 		};
+		B4686CD82ACE7A1400C0932F /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B4686CE62ACE7C8B00C0932F /* Endpoint */,
+				B4686CDD2ACE7A5F00C0932F /* Infrastructure */,
+				B4686CDB2ACE7A4F00C0932F /* HTTPClient.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B4686CD92ACE7A1B00C0932F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B4686CDA2ACE7A2300C0932F /* Remote */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B4686CDA2ACE7A2300C0932F /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				B4686CE32ACE7C5D00C0932F /* Helpers */,
+				B4686CD62ACE79F200C0932F /* AlamofireHTTPClientTests.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		B4686CDD2ACE7A5F00C0932F /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				B4686CDE2ACE7A6800C0932F /* AlamofireHTTPClient.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		B4686CE32ACE7C5D00C0932F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4686CE42ACE7C6E00C0932F /* URLProtocolStub.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B4686CE62ACE7C8B00C0932F /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				B4686CE72ACE7C9400C0932F /* HTTPMethod.swift */,
+				B4686CE92ACE7CA000C0932F /* APIEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,6 +368,9 @@
 			dependencies = (
 			);
 			name = BitHealthProject;
+			packageProductDependencies = (
+				B4686CE12ACE7AC800C0932F /* Alamofire */,
+			);
 			productName = BitHealthProject;
 			productReference = B4686C722ACD661300C0932F /* BitHealthProject.app */;
 			productType = "com.apple.product-type.application";
@@ -376,6 +443,9 @@
 				Base,
 			);
 			mainGroup = B4686C692ACD661300C0932F;
+			packageReferences = (
+				B4686CE02ACE7AC800C0932F /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B4686C732ACD661300C0932F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -419,9 +489,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4686CC22ACDB62200C0932F /* RegistrationComposer.swift in Sources */,
+				B4686CEA2ACE7CA000C0932F /* APIEndpoint.swift in Sources */,
 				B4686CB62ACD69A300C0932F /* UIVIew+Extension.swift in Sources */,
-				B4686C7A2ACD661300C0932F /* ViewController.swift in Sources */,
 				B4686CB82ACD6A5900C0932F /* UITextField+Extension.swift in Sources */,
+				B4686CDF2ACE7A6800C0932F /* AlamofireHTTPClient.swift in Sources */,
 				B4686CC42ACDB69100C0932F /* CompositionRoot.swift in Sources */,
 				B4686C762ACD661300C0932F /* AppDelegate.swift in Sources */,
 				B4686CBF2ACDB59F00C0932F /* RegistrationViewController.swift in Sources */,
@@ -430,6 +501,8 @@
 				B4686CC92ACE6A0300C0932F /* UserDefaultsKeys.swift in Sources */,
 				B4686C782ACD661300C0932F /* SceneDelegate.swift in Sources */,
 				B4686CB42ACD692800C0932F /* LoginViewController.swift in Sources */,
+				B4686CE82ACE7C9400C0932F /* HTTPMethod.swift in Sources */,
+				B4686CDC2ACE7A4F00C0932F /* HTTPClient.swift in Sources */,
 				B4686CB22ACD681600C0932F /* UIImage+Extension.swift in Sources */,
 				B4686CBB2ACD6AD100C0932F /* LoginComposer.swift in Sources */,
 				B4686CBD2ACD9D5F00C0932F /* UILabel+Extension.swift in Sources */,
@@ -440,7 +513,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4686C8D2ACD661400C0932F /* BitHealthProjectTests.swift in Sources */,
+				B4686CD72ACE79F200C0932F /* AlamofireHTTPClientTests.swift in Sources */,
+				B4686CE52ACE7C6E00C0932F /* URLProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,6 +840,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B4686CE02ACE7AC800C0932F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B4686CE12ACE7AC800C0932F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4686CE02ACE7AC800C0932F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B4686C6A2ACD661300C0932F /* Project object */;
 }

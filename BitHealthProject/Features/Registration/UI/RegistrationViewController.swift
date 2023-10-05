@@ -73,10 +73,9 @@ extension RegistrationViewController {
         [usernameField, passwordField, signUpButton].forEach { stackView.addArrangedSubview($0) }
         
         NSLayoutConstraint.activate([
-            icon.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            icon.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            icon.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             icon.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
-            icon.widthAnchor.constraint(equalToConstant: 100),
-            icon.heightAnchor.constraint(equalToConstant: 100),
             
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
