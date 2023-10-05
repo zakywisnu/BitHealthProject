@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RegistrationViewController: UIViewController {
+public final class RegistrationViewController: UIViewController {
     
     private let viewModel: RegistrationViewModel
     
@@ -28,28 +28,23 @@ final class RegistrationViewController: UIViewController {
         return view
     }()
     
-    private let usernameField: UITextField = {
-        let view = UITextField()
-        view.setCornerRadius(8)
-        view.addBorder()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setLeftPaddingPoints(8)
-        view.setRightPaddingPoints(8)
-        view.placeholder = "Input your username"
-        return view
-    }()
+    private lazy var usernameField: CustomTextField = CustomTextField()
+        .isSecure(false)
+        .setBottomLabelColor(.red)
+        .setFieldBorder()
+        .setFieldCornerRadius(8)
+        .setHiddenLabel(true)
+        .setPlaceHolder("Input your username")
+        .updateBottomLabelText(viewModel.passwordErrorText)
     
-    private let passwordField: UITextField = {
-        let view = UITextField()
-        view.setCornerRadius(8)
-        view.addBorder()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setLeftPaddingPoints(8)
-        view.setRightPaddingPoints(8)
-        view.isSecureTextEntry = true
-        view.placeholder = "Input your password"
-        return view
-    }()
+    private lazy var passwordField: CustomTextField = CustomTextField()
+        .isSecure(true)
+        .setBottomLabelColor(.red)
+        .setFieldBorder()
+        .setFieldCornerRadius(8)
+        .setHiddenLabel(true)
+        .setPlaceHolder("Input your password")
+        .updateBottomLabelText(viewModel.passwordErrorText)
     
     private lazy var signUpButton: UIButton = {
         let view = UIButton()
@@ -60,16 +55,16 @@ final class RegistrationViewController: UIViewController {
         return view
     }()
     
-    init(viewModel: RegistrationViewModel) {
+    public init(viewModel: RegistrationViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("coder hasn't been implemented yet")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "Registration"
@@ -100,8 +95,8 @@ extension RegistrationViewController {
     
     @objc
     private func didTapSignUp() {
-        let username = usernameField.text ?? ""
-        let password = passwordField.text ?? ""
+        let username = usernameField.getText()
+        let password = passwordField.getText()
         viewModel.onTapRegis(username: username, password: password)
     }
 }
