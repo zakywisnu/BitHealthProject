@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+enum UserDefaultsKeys: String {
+    case loggedInUser
+}
