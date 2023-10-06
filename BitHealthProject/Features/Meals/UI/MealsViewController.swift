@@ -7,10 +7,22 @@
 
 import UIKit
 
-final class MealsViewController: UIViewController {
+public final class MealsViewController: UIViewController {
     
-    override func viewDidLoad() {
+    private let viewModel: MealsViewModel
+    
+    public init(viewModel: MealsViewModel){
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    public required init?(coder: NSCoder) {
+        fatalError("coder hasn't been implemented yet")
+    }
+    
+    public override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.loadMeals()
     }
     
 }

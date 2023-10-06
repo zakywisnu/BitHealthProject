@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+public final class MealsComposer {
+    public static func composeMeals(httpClient: HTTPClient) -> MealsViewController {
+        let viewModel = MealsViewModelDefault(httpClient: httpClient)
+        let vc = MealsViewController(viewModel: viewModel)
+        return vc
+    }
+}
