@@ -118,48 +118,37 @@ public enum MealsMapper {
                     strInstructions: $0.strInstructions ?? "",
                     strMealThumb: $0.strMealThumb ?? "",
                     strYoutube: $0.strYoutube ?? "",
-                    strIngredient1: $0.strIngredient1 ?? "",
-                    strIngredient2: $0.strIngredient2 ?? "",
-                    strIngredient3: $0.strIngredient3 ?? "",
-                    strIngredient4: $0.strIngredient4 ?? "",
-                    strIngredient5: $0.strIngredient5 ?? "",
-                    strIngredient6: $0.strIngredient6 ?? "",
-                    strIngredient7: $0.strIngredient7 ?? "",
-                    strIngredient8: $0.strIngredient8 ?? "",
-                    strIngredient9: $0.strIngredient9 ?? "",
-                    strIngredient10: $0.strIngredient10 ?? "",
-                    strIngredient11: $0.strIngredient11 ?? "",
-                    strIngredient12: $0.strIngredient12 ?? "",
-                    strIngredient13: $0.strIngredient13 ?? "",
-                    strIngredient14: $0.strIngredient14 ?? "",
-                    strIngredient15: $0.strIngredient15 ?? "",
-                    strIngredient16: $0.strIngredient16 ?? "",
-                    strIngredient17: $0.strIngredient17 ?? "",
-                    strIngredient18: $0.strIngredient18 ?? "",
-                    strIngredient19: $0.strIngredient19 ?? "",
-                    strIngredient20: $0.strIngredient20 ?? "",
-                    strMeasure1: $0.strMeasure1 ?? "",
-                    strMeasure2: $0.strMeasure2 ?? "",
-                    strMeasure3: $0.strMeasure3 ?? "",
-                    strMeasure4: $0.strMeasure4 ?? "",
-                    strMeasure5: $0.strMeasure5 ?? "",
-                    strMeasure6: $0.strMeasure6 ?? "",
-                    strMeasure7: $0.strMeasure7 ?? "",
-                    strMeasure8: $0.strMeasure8 ?? "",
-                    strMeasure9: $0.strMeasure9 ?? "",
-                    strMeasure10: $0.strMeasure10 ?? "",
-                    strMeasure11: $0.strMeasure11 ?? "",
-                    strMeasure12: $0.strMeasure12 ?? "",
-                    strMeasure13: $0.strMeasure13 ?? "",
-                    strMeasure14: $0.strMeasure14 ?? "",
-                    strMeasure15: $0.strMeasure15 ?? "",
-                    strMeasure16: $0.strMeasure16 ?? "",
-                    strMeasure17: $0.strMeasure17 ?? "",
-                    strMeasure18: $0.strMeasure18 ?? "",
-                    strMeasure19: $0.strMeasure19 ?? "",
-                    strMeasure20: $0.strMeasure20 ?? ""
+                    strIngredientMeasure1: combineIngredientsWithMeasure(ingredient: $0.strIngredient1, measure: $0.strMeasure1),
+                    strIngredientMeasure2: combineIngredientsWithMeasure(ingredient: $0.strIngredient2, measure: $0.strMeasure2),
+                    strIngredientMeasure3: combineIngredientsWithMeasure(ingredient: $0.strIngredient3, measure: $0.strMeasure3),
+                    strIngredientMeasure4: combineIngredientsWithMeasure(ingredient: $0.strIngredient4, measure: $0.strMeasure4),
+                    strIngredientMeasure5: combineIngredientsWithMeasure(ingredient: $0.strIngredient5, measure: $0.strMeasure5),
+                    strIngredientMeasure6: combineIngredientsWithMeasure(ingredient: $0.strIngredient6, measure: $0.strMeasure6),
+                    strIngredientMeasure7: combineIngredientsWithMeasure(ingredient: $0.strIngredient7, measure: $0.strMeasure7),
+                    strIngredientMeasure8: combineIngredientsWithMeasure(ingredient: $0.strIngredient8, measure: $0.strMeasure8),
+                    strIngredientMeasure9: combineIngredientsWithMeasure(ingredient: $0.strIngredient9, measure: $0.strMeasure9),
+                    strIngredientMeasure10: combineIngredientsWithMeasure(ingredient: $0.strIngredient10, measure: $0.strMeasure10),
+                    strIngredientMeasure11: combineIngredientsWithMeasure(ingredient: $0.strIngredient11, measure: $0.strMeasure11),
+                    strIngredientMeasure12: combineIngredientsWithMeasure(ingredient: $0.strIngredient12, measure: $0.strMeasure12),
+                    strIngredientMeasure13: combineIngredientsWithMeasure(ingredient: $0.strIngredient13, measure: $0.strMeasure13),
+                    strIngredientMeasure14: combineIngredientsWithMeasure(ingredient: $0.strIngredient14, measure: $0.strMeasure14),
+                    strIngredientMeasure15: combineIngredientsWithMeasure(ingredient: $0.strIngredient15, measure: $0.strMeasure15),
+                    strIngredientMeasure16: combineIngredientsWithMeasure(ingredient: $0.strIngredient16, measure: $0.strMeasure16),
+                    strIngredientMeasure17: combineIngredientsWithMeasure(ingredient: $0.strIngredient17, measure: $0.strMeasure17),
+                    strIngredientMeasure18: combineIngredientsWithMeasure(ingredient: $0.strIngredient18, measure: $0.strMeasure18),
+                    strIngredientMeasure19: combineIngredientsWithMeasure(ingredient: $0.strIngredient19, measure: $0.strMeasure19),
+                    strIngredientMeasure20: combineIngredientsWithMeasure(ingredient: $0.strIngredient20, measure: $0.strMeasure20)
                 )
             }
+        }
+    }
+    
+    private static func combineIngredientsWithMeasure(ingredient: String?, measure: String?) -> String {
+        guard let ingredient = ingredient, let measure = measure else { return "" }
+        if ingredient.isEmpty && measure.isEmpty {
+            return ""
+        } else {
+            return "\(ingredient) - \(measure)"
         }
     }
     

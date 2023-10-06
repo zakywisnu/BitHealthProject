@@ -96,46 +96,26 @@ final class MealsMapperTests: XCTestCase {
             strInstructions: strInstructions,
             strMealThumb: strMealThumb,
             strYoutube: strYoutube,
-            strIngredient1: strIngredient1,
-            strIngredient2: strIngredient2,
-            strIngredient3: strIngredient3,
-            strIngredient4: strIngredient4,
-            strIngredient5: "",
-            strIngredient6: "",
-            strIngredient7: "",
-            strIngredient8: "",
-            strIngredient9: "",
-            strIngredient10: "",
-            strIngredient11: "",
-            strIngredient12: "",
-            strIngredient13: "",
-            strIngredient14: "",
-            strIngredient15: "",
-            strIngredient16: "",
-            strIngredient17: "",
-            strIngredient18: "",
-            strIngredient19: "",
-            strIngredient20: "",
-            strMeasure1: strMeasure1,
-            strMeasure2: strMeasure2,
-            strMeasure3: strMeasure3,
-            strMeasure4: strMeasure4,
-            strMeasure5: "",
-            strMeasure6: "",
-            strMeasure7: "",
-            strMeasure8: "",
-            strMeasure9: "",
-            strMeasure10: "",
-            strMeasure11: "",
-            strMeasure12: "",
-            strMeasure13: "",
-            strMeasure14: "",
-            strMeasure15: "",
-            strMeasure16: "",
-            strMeasure17: "",
-            strMeasure18: "",
-            strMeasure19: "",
-            strMeasure20: ""
+            strIngredientMeasure1: combineIngredientsWithMeasure(ingredient: strIngredient1, measure: strMeasure1),
+            strIngredientMeasure2: combineIngredientsWithMeasure(ingredient: strIngredient2, measure: strMeasure2),
+            strIngredientMeasure3: combineIngredientsWithMeasure(ingredient: strIngredient3, measure: strMeasure3),
+            strIngredientMeasure4: combineIngredientsWithMeasure(ingredient: strIngredient4, measure: strMeasure4),
+            strIngredientMeasure5: combineIngredientsWithMeasure(ingredient: "", measure: ""),
+            strIngredientMeasure6: combineIngredientsWithMeasure(ingredient: nil, measure: nil),
+            strIngredientMeasure7: "",
+            strIngredientMeasure8: "",
+            strIngredientMeasure9: "",
+            strIngredientMeasure10: "",
+            strIngredientMeasure11: "",
+            strIngredientMeasure12: "",
+            strIngredientMeasure13: "",
+            strIngredientMeasure14: "",
+            strIngredientMeasure15: "",
+            strIngredientMeasure16: "",
+            strIngredientMeasure17: "",
+            strIngredientMeasure18: "",
+            strIngredientMeasure19: "",
+            strIngredientMeasure20: ""
         )
         
         let json: [String: Any] = [
@@ -199,6 +179,15 @@ final class MealsMapperTests: XCTestCase {
     
     private var validStatusCode: [Int] {
         return [200, 201, 250, 289, 299]
+    }
+    
+    private func combineIngredientsWithMeasure(ingredient: String?, measure: String?) -> String {
+        guard let ingredient = ingredient, let measure = measure else { return "" }
+        if ingredient.isEmpty && measure.isEmpty {
+            return ""
+        } else {
+            return "\(ingredient) - \(measure)"
+        }
     }
     
 }
