@@ -132,8 +132,8 @@ final class MealsMapperTests: XCTestCase {
             "strIngredient2": strIngredient2,
             "strIngredient3": strIngredient3,
             "strIngredient4": strIngredient4,
-            "strIngredient5": "",
-            "strIngredient6": "",
+            "strIngredient5": " ",
+            "strIngredient6": " ",
             "strIngredient7": "",
             "strIngredient8": "",
             "strIngredient9": "",
@@ -152,8 +152,8 @@ final class MealsMapperTests: XCTestCase {
             "strMeasure2": strMeasure2,
             "strMeasure3": strMeasure3,
             "strMeasure4": strMeasure4,
-            "strMeasure5": "",
-            "strMeasure6": "",
+            "strMeasure5": " ",
+            "strMeasure6": " ",
             "strMeasure7": "",
             "strMeasure8": "",
             "strMeasure9": "",
@@ -183,7 +183,7 @@ final class MealsMapperTests: XCTestCase {
     
     private func combineIngredientsWithMeasure(ingredient: String?, measure: String?) -> String {
         guard let ingredient = ingredient, let measure = measure else { return "" }
-        if ingredient.isEmpty && measure.isEmpty {
+        if ingredient.trimmingCharacters(in: .whitespaces).isEmpty && measure.trimmingCharacters(in: .whitespaces).isEmpty {
             return ""
         } else {
             return "\(ingredient) - \(measure)"

@@ -18,4 +18,8 @@ extension UIView {
         layer.masksToBounds = true
         clipsToBounds = true
     }
+    
+    static var identifier: String {
+        return String(describing: Self.self)
+    }
 }

@@ -7,21 +7,47 @@
 
 import Foundation
 
+enum LoginRoute {
+    case registration
+    case meals
+}
+
 protocol LoginViewModel {
-    var routeToRegis: (() -> Void)? { get }
     var passwordErrorText: String? { get }
     
-    init(routeToRegis: @escaping () -> Void)
+    init(routeHandler: @escaping (LoginRoute) -> Void)
+    
+    func onTapLogin(username: String, password: String)
+    func onTapRegis()
 }
 
 final class LoginViewModelDefault: LoginViewModel {
     
-    var routeToRegis: (() -> Void)?
+    private var routeHandler: ((LoginRoute) -> Void)
+    private let userDefaults = UserDefaults.standard
     
-    init(routeToRegis: @escaping () -> Void) {
-        self.routeToRegis = routeToRegis
+    init(routeHandler: @escaping (LoginRoute) -> Void) {
+        self.routeHandler = routeHandler
     }
     
     private(set) var passwordErrorText: String?
     
+    func onTapLogin(username: String, password: String) {
+        if userDefaults.string(forKey: username) == nil {
+            // TODO: handle user not found
+        } else if let savedUser = userDefaults.string(forKey: username) {
+            if password != savedUser {
+                // TODO: handle wrong password
+            } else if password == savedUser {
+                if let encodedString = UUID().uuidString.base64Encoded() {
+                    userDefaults.set(.loggedInUser, to: encodedString)
+                    routeHandler(.meals)
+                }
+            }
+        }
+    }
+    
+    func onTapRegis() {
+        routeHandler(.registration)
+    }
 }

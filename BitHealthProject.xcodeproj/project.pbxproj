@@ -45,6 +45,9 @@
 		B4686D122ACEFDE600C0932F /* HTTPURLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D112ACEFDE600C0932F /* HTTPURLResponse+Extension.swift */; };
 		B4686D152ACF1BBF00C0932F /* MealsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D142ACF1BBF00C0932F /* MealsMapper.swift */; };
 		B4686D172ACF1BEB00C0932F /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D162ACF1BEB00C0932F /* Meals.swift */; };
+		B4686D192ACFDE2300C0932F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D182ACFDE2300C0932F /* String+Extensions.swift */; };
+		B4686D1C2AD19A5600C0932F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B4686D1B2AD19A5600C0932F /* SDWebImage */; };
+		B4686D1E2AD1A08E00C0932F /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D1D2AD1A08E00C0932F /* UITableView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,8 @@
 		B4686D112ACEFDE600C0932F /* HTTPURLResponse+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Extension.swift"; sourceTree = "<group>"; };
 		B4686D142ACF1BBF00C0932F /* MealsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsMapper.swift; sourceTree = "<group>"; };
 		B4686D162ACF1BEB00C0932F /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
+		B4686D182ACFDE2300C0932F /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B4686D1D2AD1A08E00C0932F /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4686D1C2AD19A5600C0932F /* SDWebImage in Frameworks */,
 				B4686CE22ACE7AC800C0932F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +195,7 @@
 		B4686CA52ACD66E500C0932F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B4686D1F2AD1A4CA00C0932F /* Detail */,
 				B4686CF42ACEC34D00C0932F /* Meals */,
 				B4686CAB2ACD673800C0932F /* Registration */,
 				B4686CAA2ACD671C00C0932F /* Login */,
@@ -199,6 +206,7 @@
 		B4686CA62ACD66EF00C0932F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				B4686D232AD269DC00C0932F /* Detail */,
 				B4686D0A2ACEE22600C0932F /* Meals */,
 			);
 			path = Domain;
@@ -295,6 +303,8 @@
 				B4686CB52ACD69A300C0932F /* UIVIew+Extension.swift */,
 				B4686CB72ACD6A5900C0932F /* UITextField+Extension.swift */,
 				B4686CBC2ACD9D5F00C0932F /* UILabel+Extension.swift */,
+				B4686D182ACFDE2300C0932F /* String+Extensions.swift */,
+				B4686D1D2AD1A08E00C0932F /* UITableView+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -479,6 +489,44 @@
 			path = Meals;
 			sourceTree = "<group>";
 		};
+		B4686D1F2AD1A4CA00C0932F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B4686D222AD1A4D900C0932F /* UI */,
+				B4686D212AD1A4D400C0932F /* Presentation */,
+				B4686D202AD1A4D000C0932F /* Composer */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		B4686D202AD1A4D000C0932F /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
+		B4686D212AD1A4D400C0932F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B4686D222AD1A4D900C0932F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B4686D232AD269DC00C0932F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -497,6 +545,7 @@
 			name = BitHealthProject;
 			packageProductDependencies = (
 				B4686CE12ACE7AC800C0932F /* Alamofire */,
+				B4686D1B2AD19A5600C0932F /* SDWebImage */,
 			);
 			productName = BitHealthProject;
 			productReference = B4686C722ACD661300C0932F /* BitHealthProject.app */;
@@ -573,6 +622,7 @@
 			mainGroup = B4686C692ACD661300C0932F;
 			packageReferences = (
 				B4686CE02ACE7AC800C0932F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B4686D1A2AD19A5600C0932F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = B4686C732ACD661300C0932F /* Products */;
 			projectDirPath = "";
@@ -626,6 +676,8 @@
 				B4686CF82ACEC52B00C0932F /* MealsViewController.swift in Sources */,
 				B4686CF32ACEA2AF00C0932F /* CustomTextField.swift in Sources */,
 				B4686CB82ACD6A5900C0932F /* UITextField+Extension.swift in Sources */,
+				B4686D1E2AD1A08E00C0932F /* UITableView+Extensions.swift in Sources */,
+				B4686D192ACFDE2300C0932F /* String+Extensions.swift in Sources */,
 				B4686D122ACEFDE600C0932F /* HTTPURLResponse+Extension.swift in Sources */,
 				B4686CDF2ACE7A6800C0932F /* AlamofireHTTPClient.swift in Sources */,
 				B4686D0C2ACEE23400C0932F /* MealsEndpoint.swift in Sources */,
@@ -994,6 +1046,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		B4686D1A2AD19A5600C0932F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1001,6 +1061,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B4686CE02ACE7AC800C0932F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		B4686D1B2AD19A5600C0932F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4686D1A2AD19A5600C0932F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

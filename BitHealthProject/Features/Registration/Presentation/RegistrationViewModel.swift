@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import Combine
 
 public protocol RegistrationViewModel {
     func onTapRegis(username: String, password: String)
-    var passwordErrorText: String? { get }
+    var usernameErrorText: PassthroughSubject<String?, Never> { get }
     
     init(onSuccessRegis: @escaping () -> Void)
 }
@@ -24,10 +25,12 @@ public final class RegistrationViewModelDefault: RegistrationViewModel {
     
     public func onTapRegis(username: String, password: String) {
         if userDefaults.string(forKey: username) != nil {
-            
+            usernameErrorText.send("Username sudah terdaftar")
+        } else {
+            userDefaults.setValue(password, forKey: username)
+            onSuccessRegis?()
         }
-        onSuccessRegis?()
     }
     
-    private(set) public var passwordErrorText: String?
+    public var usernameErrorText: PassthroughSubject<String?, Never> = .init()
 }

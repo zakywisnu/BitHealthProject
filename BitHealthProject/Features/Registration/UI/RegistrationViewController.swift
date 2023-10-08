@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 public final class RegistrationViewController: UIViewController {
     
     private let viewModel: RegistrationViewModel
+    private var cancellable: Set<AnyCancellable> = .init()
     
     private let stackView: UIStackView = {
         let view = UIStackView()
@@ -35,7 +37,6 @@ public final class RegistrationViewController: UIViewController {
         .setFieldCornerRadius(8)
         .setHiddenLabel(true)
         .setPlaceHolder("Input your username")
-        .updateBottomLabelText(viewModel.passwordErrorText)
     
     private lazy var passwordField: CustomTextField = CustomTextField()
         .isSecure(true)
@@ -44,7 +45,6 @@ public final class RegistrationViewController: UIViewController {
         .setFieldCornerRadius(8)
         .setHiddenLabel(true)
         .setPlaceHolder("Input your password")
-        .updateBottomLabelText(viewModel.passwordErrorText)
     
     private lazy var signUpButton: UIButton = {
         let view = UIButton()
@@ -69,6 +69,7 @@ public final class RegistrationViewController: UIViewController {
         view.backgroundColor = .white
         title = "Registration"
         setupView()
+        observeErrorState()
     }
     
 }
@@ -87,17 +88,21 @@ extension RegistrationViewController {
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             
-            usernameField.heightAnchor.constraint(equalToConstant: 44),
-            passwordField.heightAnchor.constraint(equalToConstant: 44),
             signUpButton.heightAnchor.constraint(equalToConstant: 44),
         ])
     }
     
     @objc
     private func didTapSignUp() {
-        let username = usernameField.getText()
-        let password = passwordField.getText()
-        viewModel.onTapRegis(username: username, password: password)
+        viewModel.onTapRegis(username: usernameField.getText().lowercased(), password: passwordField.getText())
+    }
+    
+    private func observeErrorState() {
+        viewModel.usernameErrorText
+            .receive(on: DispatchQueue.main)
+            .sink { [weak usernameField] error in
+                usernameField?.updateBottomLabelText(error)
+            }.store(in: &cancellable)
     }
 }
 

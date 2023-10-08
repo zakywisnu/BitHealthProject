@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import Alamofire
 
 final class CompositionRoot {
     
     private let navigationController: UINavigationController
+    
+    private lazy var httpClient: HTTPClient = {
+        return AlamofireHTTPClient(session: Session(configuration: .ephemeral))
+    }()
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -17,7 +22,7 @@ final class CompositionRoot {
     
     func composeRoot() -> UINavigationController {
         if UserDefaults.standard.get(.loggedInUser) != nil {
-            navigationController.setViewControllers([UIViewController()], animated: true)
+            showMeals()
         } else {
             showLogin()
         }
@@ -25,13 +30,26 @@ final class CompositionRoot {
     }
     
     func showLogin() {
-        let vc = LoginComposer.composeLogin(showRegis: showRegistration)
+        let vc = LoginComposer.composeLogin(routeHandler: handleLoginRoute)
         navigationController.setViewControllers([vc], animated: true)
+    }
+    
+    private func handleLoginRoute(_ route: LoginRoute) {
+        if route == .meals {
+            showMeals()
+        } else {
+            showRegistration()
+        }
     }
     
     func showRegistration() {
         let vc = RegistrationComposer.composeRegistration(successRegis: navigateBack)
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showMeals() {
+        let vc = MealsComposer.composeMeals(httpClient: httpClient)
+        navigationController.setViewControllers([vc], animated: true)
     }
     
     private func navigateBack() {

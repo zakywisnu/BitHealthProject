@@ -9,6 +9,8 @@ import Foundation
 import Combine
 
 public protocol MealsViewModel {
+    var mealsPublisher: CurrentValueSubject<[Meals], Never> { get }
+    var meals: [Meals] { get }
     func loadMeals()
 }
 
@@ -18,6 +20,12 @@ public final class MealsViewModelDefault: MealsViewModel {
     
     public init(httpClient: HTTPClient) {
         self.httpClient = httpClient
+    }
+    
+    public var mealsPublisher: CurrentValueSubject<[Meals], Never> = .init([])
+    
+    public var meals: [Meals] {
+        mealsPublisher.value
     }
     
     public func loadMeals() {
@@ -30,8 +38,9 @@ public final class MealsViewModelDefault: MealsViewModel {
                 case let .failure(error):
                     print("error: ", error)
                 }
-            } receiveValue: { meals in
-                print("meals: ", meals)
+            } receiveValue: { [weak self] meals in
+                guard let self = self else { return }
+                self.mealsPublisher.send(meals)
             }
     }
 }

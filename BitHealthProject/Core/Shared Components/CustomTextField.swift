@@ -14,6 +14,7 @@ class CustomTextField: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setLeftPaddingPoints(8)
         view.setRightPaddingPoints(8)
+        view.autocorrectionType = .no
         return view
     }()
     

@@ -105,11 +105,11 @@ extension LoginViewController {
     
     @objc
     private func didTapSignUp() {
-        viewModel.routeToRegis?()
+        viewModel.onTapRegis()
     }
     
     @objc
     private func didTapLogin() {
-        print("password: \(passwordField.getText())")
+        viewModel.onTapLogin(username: usernameField.getText().lowercased(), password: passwordField.getText())
     }
 }
