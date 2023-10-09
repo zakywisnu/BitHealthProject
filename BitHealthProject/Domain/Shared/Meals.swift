@@ -63,4 +63,31 @@ public struct Meals: Equatable {
     public let strIngredientMeasure18: String
     public let strIngredientMeasure19: String
     public let strIngredientMeasure20: String
+    
+    public var ingredients: [String] {
+        let ingredientsMeasures = [
+            strIngredientMeasure1,
+            strIngredientMeasure2,
+            strIngredientMeasure3,
+            strIngredientMeasure4,
+            strIngredientMeasure5,
+            strIngredientMeasure6,
+            strIngredientMeasure7,
+            strIngredientMeasure8,
+            strIngredientMeasure9,
+            strIngredientMeasure10,
+            strIngredientMeasure11,
+            strIngredientMeasure12,
+            strIngredientMeasure13,
+            strIngredientMeasure14,
+            strIngredientMeasure15,
+            strIngredientMeasure16,
+            strIngredientMeasure17,
+            strIngredientMeasure18,
+            strIngredientMeasure19,
+            strIngredientMeasure20
+        ]
+        
+        return ingredientsMeasures.filter { !$0.trimmingCharacters(in: .whitespaces).isEmpty }
+    }
 }

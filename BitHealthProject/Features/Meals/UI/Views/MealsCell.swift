@@ -10,6 +10,9 @@ import SDWebImage
 
 final class MealsCell: UITableViewCell {
     
+    private var onTapImage: (() -> Void)?
+    private var onTapDetail: (() -> Void)?
+    
     private let containerView: UIView = {
         let view = UIView()
         view.setCornerRadius(8)
@@ -22,12 +25,18 @@ final class MealsCell: UITableViewCell {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapImage))
+        view.addGestureRecognizer(tapGesture)
         return view
     }()
     
     private lazy var contentContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray5
+        view.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapDetail))
+        view.addGestureRecognizer(tapGesture)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -55,12 +64,26 @@ final class MealsCell: UITableViewCell {
         fatalError("coder hasn't been implemented yet")
     }
     
-    func setupData(image: String, title: String, category: String) {
+    @discardableResult
+    func setupData(image: String, title: String, category: String) -> Self {
         if let imageURL = URL(string: image) {
             mealImage.sd_setImage(with: imageURL)
         }
         titleLabel.text = title
         categoryLabel.text = category
+        return self
+    }
+    
+    @discardableResult
+    func onTapDetail(_ handler: @escaping () -> Void) -> Self {
+        onTapDetail = handler
+        return self
+    }
+    
+    @discardableResult
+    func onTapImage(_ handler: @escaping () -> Void) -> Self {
+        onTapImage = handler
+        return self
     }
 }
 
@@ -97,5 +120,15 @@ extension MealsCell {
             categoryLabel.trailingAnchor.constraint(equalTo: contentContainer.trailingAnchor, constant: -16),
             categoryLabel.bottomAnchor.constraint(equalTo: contentContainer.bottomAnchor, constant: -8),
         ])
+    }
+    
+    @objc
+    private func didTapDetail() {
+        onTapDetail?()
+    }
+    
+    @objc
+    private func didTapImage() {
+        onTapImage?()
     }
 }

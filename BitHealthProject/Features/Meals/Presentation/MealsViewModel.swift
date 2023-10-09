@@ -11,15 +11,19 @@ import Combine
 public protocol MealsViewModel {
     var mealsPublisher: CurrentValueSubject<[Meals], Never> { get }
     var meals: [Meals] { get }
+    
     func loadMeals()
+    func routeDetail(id: String)
 }
 
 public final class MealsViewModelDefault: MealsViewModel {
-    private let httpClient: HTTPClient
+    private let useCase: MealsUseCase
     private var cancellable: Cancellable?
+    private var routeToDetail: ((String) -> Void)
     
-    public init(httpClient: HTTPClient) {
-        self.httpClient = httpClient
+    public init(useCase: MealsUseCase, routeToDetail: @escaping (String) -> Void) {
+        self.useCase = useCase
+        self.routeToDetail = routeToDetail
     }
     
     public var mealsPublisher: CurrentValueSubject<[Meals], Never> = .init([])
@@ -30,8 +34,7 @@ public final class MealsViewModelDefault: MealsViewModel {
     
     public func loadMeals() {
         let urlRequest = MealsEndpoint(letter: "a").makeURLRequest()
-        cancellable = httpClient.getPublisher(urlRequest: urlRequest)
-            .tryMap(MealsMapper.map)
+        cancellable = useCase.loadMealsPublisher(request: urlRequest)
             .sink { completion in
                 switch completion {
                 case .finished: break
@@ -42,5 +45,9 @@ public final class MealsViewModelDefault: MealsViewModel {
                 guard let self = self else { return }
                 self.mealsPublisher.send(meals)
             }
+    }
+    
+    public func routeDetail(id: String) {
+        routeToDetail(id)
     }
 }

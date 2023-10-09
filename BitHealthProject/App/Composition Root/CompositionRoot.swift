@@ -48,8 +48,13 @@ final class CompositionRoot {
     }
     
     func showMeals() {
-        let vc = MealsComposer.composeMeals(httpClient: httpClient)
+        let vc = MealsComposer.composeMeals(httpClient: httpClient, routeToDetail: showDetails(id:))
         navigationController.setViewControllers([vc], animated: true)
+    }
+    
+    func showDetails(id: String) {
+        let vc = DetailMealsComposer.composeDetails(httpClient: httpClient, id: id)
+        navigationController.pushViewController(vc, animated: true)
     }
     
     private func navigateBack() {

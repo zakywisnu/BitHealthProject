@@ -73,6 +73,15 @@ extension MealsViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MealsCell.identifier) as? MealsCell else { return UITableViewCell() }
         let data = viewModel.meals[indexPath.row]
         cell.setupData(image: data.strMealThumb, title: data.strMeal, category: data.strCategory)
+            .onTapImage { [weak self] in
+                guard let self = self else { return }
+                
+            }
+            .onTapDetail { [weak self] in
+                guard let self = self else { return }
+                self.viewModel.routeDetail(id: data.idMeal)
+            }
+        
         return cell
     }
 }
