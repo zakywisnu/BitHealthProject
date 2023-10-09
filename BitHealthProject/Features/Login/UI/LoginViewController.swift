@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 final class LoginViewController: UIViewController {
     
     private let viewModel: LoginViewModel
+    private var cancellables: Set<AnyCancellable> = .init()
     
     private let stackView: UIStackView = {
         let view = UIStackView()
@@ -35,7 +37,6 @@ final class LoginViewController: UIViewController {
         .setFieldCornerRadius(8)
         .setHiddenLabel(true)
         .setPlaceHolder("Input your username")
-        .updateBottomLabelText(viewModel.passwordErrorText)
     
     private lazy var passwordField: CustomTextField = CustomTextField()
         .isSecure(true)
@@ -44,7 +45,6 @@ final class LoginViewController: UIViewController {
         .setFieldCornerRadius(8)
         .setHiddenLabel(true)
         .setPlaceHolder("Input your password")
-        .updateBottomLabelText(viewModel.passwordErrorText)
     
     private lazy var loginButton: UIButton = {
         let view = UIButton()
@@ -81,6 +81,7 @@ final class LoginViewController: UIViewController {
         view.backgroundColor = .white
         title = "Login"
         setupView()
+        observeViewModel()
     }
     
 }
@@ -111,5 +112,21 @@ extension LoginViewController {
     @objc
     private func didTapLogin() {
         viewModel.onTapLogin(username: usernameField.getText().lowercased(), password: passwordField.getText())
+    }
+    
+    private func observeViewModel() {
+        viewModel.passwordErrorText
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] error in
+                guard let self = self else { return }
+                self.passwordField.updateBottomLabelText(error)
+            }.store(in: &cancellables)
+        
+        viewModel.usernameErrorText
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] error in
+                guard let self = self else { return }
+                self.usernameField.updateBottomLabelText(error)
+            }.store(in: &cancellables)
     }
 }

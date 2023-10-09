@@ -25,7 +25,7 @@ public final class RegistrationViewModelDefault: RegistrationViewModel {
     
     public func onTapRegis(username: String, password: String) {
         if userDefaults.string(forKey: username) != nil {
-            usernameErrorText.send("Username sudah terdaftar")
+            usernameErrorText.send("Username already registered")
         } else {
             userDefaults.setValue(password, forKey: username)
             onSuccessRegis?()

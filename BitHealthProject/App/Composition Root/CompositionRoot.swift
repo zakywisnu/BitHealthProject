@@ -11,6 +11,7 @@ import Alamofire
 final class CompositionRoot {
     
     private let navigationController: UINavigationController
+    private let userDefaults = UserDefaults.standard
     
     private lazy var httpClient: HTTPClient = {
         return AlamofireHTTPClient(session: Session(configuration: .ephemeral))
@@ -21,7 +22,7 @@ final class CompositionRoot {
     }
     
     func composeRoot() -> UINavigationController {
-        if UserDefaults.standard.get(.loggedInUser) != nil {
+        if userDefaults.get(.loggedInUser) != nil {
             showMeals()
         } else {
             showLogin()
@@ -54,9 +55,8 @@ final class CompositionRoot {
                 self.showDetails(id: id)
             case .image(let image):
                 self.showFullscreenImage(image: image)
-            case .changeMeals:
-                break
             case .logout:
+                self.removeCredentials()
                 self.showLogin()
             }
         }
@@ -75,5 +75,9 @@ final class CompositionRoot {
     
     private func navigateBack() {
         navigationController.popViewController(animated: true)
+    }
+    
+    private func removeCredentials() {
+        userDefaults.removeObject(forKey: UserDefaultsKeys.loggedInUser.rawValue)
     }
 }

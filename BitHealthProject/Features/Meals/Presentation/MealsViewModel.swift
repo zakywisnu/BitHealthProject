@@ -11,7 +11,6 @@ import Combine
 public enum MealsRoute {
     case details(String)
     case image(String)
-    case changeMeals
     case logout
 }
 

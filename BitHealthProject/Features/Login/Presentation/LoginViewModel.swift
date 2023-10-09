@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 enum LoginRoute {
     case registration
@@ -13,7 +14,8 @@ enum LoginRoute {
 }
 
 protocol LoginViewModel {
-    var passwordErrorText: String? { get }
+    var passwordErrorText: PassthroughSubject<String?, Never> { get }
+    var usernameErrorText: PassthroughSubject<String?, Never> { get }
     
     init(routeHandler: @escaping (LoginRoute) -> Void)
     
@@ -30,14 +32,20 @@ final class LoginViewModelDefault: LoginViewModel {
         self.routeHandler = routeHandler
     }
     
-    private(set) var passwordErrorText: String?
+    var passwordErrorText: PassthroughSubject<String?, Never> = .init()
+    var usernameErrorText: PassthroughSubject<String?, Never> = .init()
     
     func onTapLogin(username: String, password: String) {
+        usernameErrorText.send(nil)
+        passwordErrorText.send(nil)
+        
         if userDefaults.string(forKey: username) == nil {
             // TODO: handle user not found
+            usernameErrorText.send("User not found")
         } else if let savedUser = userDefaults.string(forKey: username) {
             if password != savedUser {
                 // TODO: handle wrong password
+                passwordErrorText.send("Wrong password")
             } else if password == savedUser {
                 if let encodedString = UUID().uuidString.base64Encoded() {
                     userDefaults.set(.loggedInUser, to: encodedString)
