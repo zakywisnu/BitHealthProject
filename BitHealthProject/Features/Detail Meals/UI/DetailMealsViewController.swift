@@ -26,11 +26,14 @@ public final class DetailMealsViewController: UIViewController {
         return view
     }()
     
-    private let mealImage: UIImageView = {
+    private lazy var mealImage: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setCornerRadius(0)
+        view.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapImage))
+        view.addGestureRecognizer(tapGesture)
         return view
     }()
     
@@ -163,5 +166,10 @@ extension DetailMealsViewController {
             label.translatesAutoresizingMaskIntoConstraints = false
             ingredientsStack.addArrangedSubview(label)
         }
+    }
+    
+    @objc
+    private func didTapImage() {
+        viewModel.navigate()
     }
 }

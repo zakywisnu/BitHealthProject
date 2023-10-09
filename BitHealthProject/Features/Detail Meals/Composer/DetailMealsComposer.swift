@@ -10,10 +10,11 @@ import Foundation
 public final class DetailMealsComposer {
     public static func composeDetails(
         httpClient: HTTPClient,
-        id: String
+        id: String,
+        routeFullscreen: @escaping (String) -> Void
     ) -> DetailMealsViewController {
         let interactor = DetailMealsInteractor(httpClient: httpClient)
-        let viewModel = DetailMealsViewModelDefault(id: id, interactor: interactor)
+        let viewModel = DetailMealsViewModelDefault(id: id, interactor: interactor, routeFullscreen: routeFullscreen)
         let vc = DetailMealsViewController(viewModel: viewModel)
         return vc
     }

@@ -62,6 +62,8 @@
 		B4686D432AD40DD900C0932F /* MealsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D422AD40DD900C0932F /* MealsUseCase.swift */; };
 		B4686D452AD4105400C0932F /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D442AD4105400C0932F /* XCTestCase+MemoryLeakTracking.swift */; };
 		B4686D482AD418CE00C0932F /* MealsItemGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D472AD418CE00C0932F /* MealsItemGenerator.swift */; };
+		B4686D4C2AD41ABB00C0932F /* FullscreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D4B2AD41ABB00C0932F /* FullscreenImageViewController.swift */; };
+		B4686D4F2AD41DAC00C0932F /* FullscreenImageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D4E2AD41DAC00C0932F /* FullscreenImageComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,8 @@
 		B4686D422AD40DD900C0932F /* MealsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsUseCase.swift; sourceTree = "<group>"; };
 		B4686D442AD4105400C0932F /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		B4686D472AD418CE00C0932F /* MealsItemGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsItemGenerator.swift; sourceTree = "<group>"; };
+		B4686D4B2AD41ABB00C0932F /* FullscreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenImageViewController.swift; sourceTree = "<group>"; };
+		B4686D4E2AD41DAC00C0932F /* FullscreenImageComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenImageComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +228,7 @@
 		B4686CA52ACD66E500C0932F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B4686D492AD41AA300C0932F /* Zoomable Image */,
 				B4686D1F2AD1A4CA00C0932F /* Detail Meals */,
 				B4686CF42ACEC34D00C0932F /* Meals */,
 				B4686CAB2ACD673800C0932F /* Registration */,
@@ -607,6 +612,31 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		B4686D492AD41AA300C0932F /* Zoomable Image */ = {
+			isa = PBXGroup;
+			children = (
+				B4686D4D2AD41DA500C0932F /* Composer */,
+				B4686D4A2AD41AAB00C0932F /* UI */,
+			);
+			path = "Zoomable Image";
+			sourceTree = "<group>";
+		};
+		B4686D4A2AD41AAB00C0932F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B4686D4B2AD41ABB00C0932F /* FullscreenImageViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B4686D4D2AD41DA500C0932F /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				B4686D4E2AD41DAC00C0932F /* FullscreenImageComposer.swift */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -772,6 +802,7 @@
 				B4686C762ACD661300C0932F /* AppDelegate.swift in Sources */,
 				B4686CBF2ACDB59F00C0932F /* RegistrationViewController.swift in Sources */,
 				B4686CC72ACE69B500C0932F /* DefaultsKeys.swift in Sources */,
+				B4686D4F2AD41DAC00C0932F /* FullscreenImageComposer.swift in Sources */,
 				B4686CD52ACE777F00C0932F /* LoginViewModel.swift in Sources */,
 				B4686D312AD26F1D00C0932F /* DetailMealsComposer.swift in Sources */,
 				B4686CC92ACE6A0300C0932F /* UserDefaultsKeys.swift in Sources */,
@@ -783,6 +814,7 @@
 				B4686D432AD40DD900C0932F /* MealsUseCase.swift in Sources */,
 				B4686CB22ACD681600C0932F /* UIImage+Extension.swift in Sources */,
 				B4686D332AD26F5800C0932F /* DetailMealsViewModel.swift in Sources */,
+				B4686D4C2AD41ABB00C0932F /* FullscreenImageViewController.swift in Sources */,
 				B4686CBB2ACD6AD100C0932F /* LoginComposer.swift in Sources */,
 				B4686D3F2AD40AD700C0932F /* MealsInteractor.swift in Sources */,
 				B4686D352AD26F9500C0932F /* DetailMealsViewController.swift in Sources */,

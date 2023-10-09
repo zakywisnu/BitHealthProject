@@ -48,13 +48,29 @@ final class CompositionRoot {
     }
     
     func showMeals() {
-        let vc = MealsComposer.composeMeals(httpClient: httpClient, routeToDetail: showDetails(id:))
+        let vc = MealsComposer.composeMeals(httpClient: httpClient) { route in
+            switch route {
+            case .details(let id):
+                self.showDetails(id: id)
+            case .image(let image):
+                self.showFullscreenImage(image: image)
+            case .changeMeals:
+                break
+            case .logout:
+                self.showLogin()
+            }
+        }
         navigationController.setViewControllers([vc], animated: true)
     }
     
     func showDetails(id: String) {
-        let vc = DetailMealsComposer.composeDetails(httpClient: httpClient, id: id)
+        let vc = DetailMealsComposer.composeDetails(httpClient: httpClient, id: id, routeFullscreen: showFullscreenImage(image:))
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showFullscreenImage(image: String) {
+        let vc = FullscreenImageComposer.composeFullscreen(image: image)
+        navigationController.present(vc, animated: true)
     }
     
     private func navigateBack() {
