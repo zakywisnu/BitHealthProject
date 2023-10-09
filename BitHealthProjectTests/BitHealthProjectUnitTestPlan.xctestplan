@@ -9,12 +9,22 @@
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : false,
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:BitHealthProject.xcodeproj",
+          "identifier" : "B4686C712ACD661300C0932F",
+          "name" : "BitHealthProject"
+        }
+      ]
+    },
     "targetForVariableExpansion" : {
       "containerPath" : "container:BitHealthProject.xcodeproj",
       "identifier" : "B4686C712ACD661300C0932F",
       "name" : "BitHealthProject"
-    }
+    },
+    "testExecutionOrdering" : "random",
+    "threadSanitizerEnabled" : true
   },
   "testTargets" : [
     {

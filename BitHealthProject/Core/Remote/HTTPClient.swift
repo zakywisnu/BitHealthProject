@@ -13,17 +13,3 @@ public protocol HTTPClient {
     
     func performRequest(_ request: URLRequest, completion: @escaping (Result) -> Void)
 }
-
-public extension HTTPClient {
-    typealias Publisher = AnyPublisher<(Data, HTTPURLResponse), Error>
-
-    func getPublisher(urlRequest: URLRequest) -> Publisher {
-
-        return Deferred {
-            Future { completion in
-                self.performRequest(urlRequest, completion: completion)
-            }
-        }
-        .eraseToAnyPublisher()
-    }
-}
