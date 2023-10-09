@@ -8,22 +8,8 @@
 import Foundation
 import Combine
 
-public protocol MealsUseCase {
-    func loadMeals(request: URLRequest, completion: @escaping (Result<[Meals], Error>) -> Void)
-}
-
-extension MealsUseCase {
-    func loadMealsPublisher(request: URLRequest) -> AnyPublisher<[Meals], Error> {
-        return Deferred {
-            Future { completion in
-                self.loadMeals(request: request, completion: completion)
-            }
-        }
-        .eraseToAnyPublisher()
-    }
-}
-
-public final class MealsUseCaseDefault: MealsUseCase {
+public final class MealsInteractor: MealsUseCase {
+    public typealias Response = [Meals]
     
     private let httpClient: HTTPClient
     
@@ -31,7 +17,7 @@ public final class MealsUseCaseDefault: MealsUseCase {
         self.httpClient = httpClient
     }
     
-    public func loadMeals(request: URLRequest, completion: @escaping (Result<[Meals], Error>) -> Void) {
+    public func loadMeals(request: URLRequest, completion: @escaping (Result<Response, Error>) -> Void) {
         httpClient.performRequest(request) { result in
             switch result {
             case let .success((data ,response)):

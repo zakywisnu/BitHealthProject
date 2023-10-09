@@ -17,7 +17,7 @@ public protocol DetailMealsViewModel {
 
 public final class DetailMealsViewModelDefault: DetailMealsViewModel {
     
-    private let httpClient: HTTPClient
+    private let interactor: DetailMealsInteractor
     private let id: String
     private var cancellable: Cancellable?
     
@@ -28,16 +28,14 @@ public final class DetailMealsViewModelDefault: DetailMealsViewModel {
     
     public var detailPublisher: CurrentValueSubject<Meals?, Never> = .init(nil)
     
-    public init(id: String, httpClient: HTTPClient) {
+    public init(id: String, interactor: DetailMealsInteractor) {
         self.id = id
-        self.httpClient = httpClient
+        self.interactor = interactor
     }
     
     public func loadDetails() {
         let urlRequest = DetailMealsEndpoint(id: id).makeURLRequest()
-        cancellable = httpClient
-            .getPublisher(urlRequest: urlRequest)
-            .tryMap(MealsMapper.map)
+        cancellable = interactor.loadMealsPublisher(request: urlRequest)
             .sink { completion in
                 switch completion {
                 case .finished: break
@@ -46,7 +44,7 @@ public final class DetailMealsViewModelDefault: DetailMealsViewModel {
                 }
             } receiveValue: { [weak self] meals in
                 guard let self = self else { return }
-                self.detailPublisher.send(meals[0])
+                self.detailPublisher.send(meals)
             }
 
     }

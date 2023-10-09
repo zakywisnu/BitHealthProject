@@ -8,8 +8,12 @@
 import Foundation
 
 public final class DetailMealsComposer {
-    public static func composeDetails(httpClient: HTTPClient, id: String) -> DetailMealsViewController {
-        let viewModel = DetailMealsViewModelDefault(id: id, httpClient: httpClient)
+    public static func composeDetails(
+        httpClient: HTTPClient,
+        id: String
+    ) -> DetailMealsViewController {
+        let interactor = DetailMealsInteractor(httpClient: httpClient)
+        let viewModel = DetailMealsViewModelDefault(id: id, interactor: interactor)
         let vc = DetailMealsViewController(viewModel: viewModel)
         return vc
     }

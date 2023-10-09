@@ -8,9 +8,12 @@
 import Foundation
 
 public final class MealsComposer {
-    public static func composeMeals(httpClient: HTTPClient, routeToDetail: @escaping (String) -> Void) -> MealsViewController {
-        let useCase = MealsUseCaseDefault(httpClient: httpClient)
-        let viewModel = MealsViewModelDefault(useCase: useCase, routeToDetail: routeToDetail)
+    public static func composeMeals(
+        httpClient: HTTPClient,
+        routeToDetail: @escaping (String) -> Void
+    ) -> MealsViewController {
+        let interactor = MealsInteractor(httpClient: httpClient)
+        let viewModel = MealsViewModelDefault(interactor: interactor, routeToDetail: routeToDetail)
         let vc = MealsViewController(viewModel: viewModel)
         return vc
     }

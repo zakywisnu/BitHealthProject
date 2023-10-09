@@ -17,12 +17,12 @@ public protocol MealsViewModel {
 }
 
 public final class MealsViewModelDefault: MealsViewModel {
-    private let useCase: MealsUseCase
-    private var cancellable: Cancellable?
     private var routeToDetail: ((String) -> Void)
+    private var cancellable: Cancellable?
+    private let interactor: MealsInteractor
     
-    public init(useCase: MealsUseCase, routeToDetail: @escaping (String) -> Void) {
-        self.useCase = useCase
+    public init(interactor: MealsInteractor, routeToDetail: @escaping (String) -> Void) {
+        self.interactor = interactor
         self.routeToDetail = routeToDetail
     }
     
@@ -34,7 +34,7 @@ public final class MealsViewModelDefault: MealsViewModel {
     
     public func loadMeals() {
         let urlRequest = MealsEndpoint(letter: "a").makeURLRequest()
-        cancellable = useCase.loadMealsPublisher(request: urlRequest)
+        cancellable = interactor.loadMealsPublisher(request: urlRequest)
             .sink { completion in
                 switch completion {
                 case .finished: break
@@ -43,6 +43,7 @@ public final class MealsViewModelDefault: MealsViewModel {
                 }
             } receiveValue: { [weak self] meals in
                 guard let self = self else { return }
+                dump(meals)
                 self.mealsPublisher.send(meals)
             }
     }

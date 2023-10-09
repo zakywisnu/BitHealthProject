@@ -57,8 +57,11 @@
 		B4686D352AD26F9500C0932F /* DetailMealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D342AD26F9500C0932F /* DetailMealsViewController.swift */; };
 		B4686D3A2AD3FAC200C0932F /* DetailMealsEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D392AD3FAC200C0932F /* DetailMealsEndToEndTests.swift */; };
 		B4686D3C2AD3FACD00C0932F /* MealsEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D3B2AD3FACD00C0932F /* MealsEndToEndTests.swift */; };
-		B4686D3F2AD40AD700C0932F /* MealsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D3E2AD40AD700C0932F /* MealsUseCase.swift */; };
+		B4686D3F2AD40AD700C0932F /* MealsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D3E2AD40AD700C0932F /* MealsInteractor.swift */; };
 		B4686D412AD40CA300C0932F /* DetailMealsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D402AD40CA300C0932F /* DetailMealsUseCase.swift */; };
+		B4686D432AD40DD900C0932F /* MealsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D422AD40DD900C0932F /* MealsUseCase.swift */; };
+		B4686D452AD4105400C0932F /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D442AD4105400C0932F /* XCTestCase+MemoryLeakTracking.swift */; };
+		B4686D482AD418CE00C0932F /* MealsItemGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4686D472AD418CE00C0932F /* MealsItemGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,8 +133,11 @@
 		B4686D342AD26F9500C0932F /* DetailMealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMealsViewController.swift; sourceTree = "<group>"; };
 		B4686D392AD3FAC200C0932F /* DetailMealsEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMealsEndToEndTests.swift; sourceTree = "<group>"; };
 		B4686D3B2AD3FACD00C0932F /* MealsEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndToEndTests.swift; sourceTree = "<group>"; };
-		B4686D3E2AD40AD700C0932F /* MealsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsUseCase.swift; sourceTree = "<group>"; };
+		B4686D3E2AD40AD700C0932F /* MealsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsInteractor.swift; sourceTree = "<group>"; };
 		B4686D402AD40CA300C0932F /* DetailMealsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMealsUseCase.swift; sourceTree = "<group>"; };
+		B4686D422AD40DD900C0932F /* MealsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsUseCase.swift; sourceTree = "<group>"; };
+		B4686D442AD4105400C0932F /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		B4686D472AD418CE00C0932F /* MealsItemGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsItemGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				B4686CEF2ACE9FD700C0932F /* SharedTestHelpers.swift */,
+				B4686D442AD4105400C0932F /* XCTestCase+MemoryLeakTracking.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -481,6 +488,7 @@
 		B4686D012ACEDCE600C0932F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				B4686D462AD418C500C0932F /* Helpers */,
 				B4686D362AD3F0D400C0932F /* Shared */,
 				B4686D262AD26C8B00C0932F /* Detail Meals */,
 				B4686D022ACEDCF600C0932F /* Meals */,
@@ -508,7 +516,7 @@
 		B4686D0A2ACEE22600C0932F /* Meals */ = {
 			isa = PBXGroup;
 			children = (
-				B4686D3E2AD40AD700C0932F /* MealsUseCase.swift */,
+				B4686D3E2AD40AD700C0932F /* MealsInteractor.swift */,
 				B4686D0B2ACEE23400C0932F /* MealsEndpoint.swift */,
 			);
 			path = Meals;
@@ -586,8 +594,17 @@
 			children = (
 				B4686D142ACF1BBF00C0932F /* MealsMapper.swift */,
 				B4686D162ACF1BEB00C0932F /* Meals.swift */,
+				B4686D422AD40DD900C0932F /* MealsUseCase.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		B4686D462AD418C500C0932F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4686D472AD418CE00C0932F /* MealsItemGenerator.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -763,10 +780,11 @@
 				B4686CB42ACD692800C0932F /* LoginViewController.swift in Sources */,
 				B4686CE82ACE7C9400C0932F /* HTTPMethod.swift in Sources */,
 				B4686CDC2ACE7A4F00C0932F /* HTTPClient.swift in Sources */,
+				B4686D432AD40DD900C0932F /* MealsUseCase.swift in Sources */,
 				B4686CB22ACD681600C0932F /* UIImage+Extension.swift in Sources */,
 				B4686D332AD26F5800C0932F /* DetailMealsViewModel.swift in Sources */,
 				B4686CBB2ACD6AD100C0932F /* LoginComposer.swift in Sources */,
-				B4686D3F2AD40AD700C0932F /* MealsUseCase.swift in Sources */,
+				B4686D3F2AD40AD700C0932F /* MealsInteractor.swift in Sources */,
 				B4686D352AD26F9500C0932F /* DetailMealsViewController.swift in Sources */,
 				B4686CBD2ACD9D5F00C0932F /* UILabel+Extension.swift in Sources */,
 				B4686CFA2ACEC53300C0932F /* MealsViewModel.swift in Sources */,
@@ -779,6 +797,8 @@
 			files = (
 				B4686CD72ACE79F200C0932F /* AlamofireHTTPClientTests.swift in Sources */,
 				B4686D3C2AD3FACD00C0932F /* MealsEndToEndTests.swift in Sources */,
+				B4686D452AD4105400C0932F /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				B4686D482AD418CE00C0932F /* MealsItemGenerator.swift in Sources */,
 				B4686D3A2AD3FAC200C0932F /* DetailMealsEndToEndTests.swift in Sources */,
 				B4686D102ACEE29900C0932F /* MealsMapperTests.swift in Sources */,
 				B4686D282AD26C9600C0932F /* DetailMealsEndpointTests.swift in Sources */,
